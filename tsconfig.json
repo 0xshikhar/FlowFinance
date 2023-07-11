@@ -28,7 +28,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/wallet/index.jsx", "components/wallet/index.jsx"  ],
   "exclude": [
     "node_modules"
   ]

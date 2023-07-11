@@ -10,19 +10,23 @@ import { RouteHandlerManager } from "next/dist/server/future/route-handler-manag
 export default function Wallet() {
     const [isOpen, setIsOpen] = useState(false); // for popup
     const [walletState, setWalletState] = useState(false)
-    const [addr, setAddr] = useState("");
+    const [user, setUser] = useState({ addr: '' });
+    const [services, setServices] = useState([])
 
-    if (typeof window !== 'undefined') {
-        console.log('You are on the browser')
-        // 👉️ can use localStorage here
+    useEffect(() => fcl.discovery.authn.subscribe(res => setServices(res.results)), [])
 
-        localStorage.setItem('name', 'Tom');
 
-        console.log(localStorage.getItem('name')); // 👉️ "Tom"
-    } else {
-        console.log('You are on the server')
-        // 👉️ can't use localStorage
-    }
+    // if (typeof window !== 'undefined') {
+    //     console.log('You are on the browser')
+    //     // 👉️ can use localStorage here
+
+    //     localStorage.setItem('name', 'Tom');
+
+    //     console.log(localStorage.getItem('name')); // 👉️ "Tom"
+    // } else {
+    //     console.log('You are on the server')
+    //     // 👉️ can't use localStorage
+    // }
 
 
 
@@ -42,8 +46,8 @@ export default function Wallet() {
     //function for login
     const Login = async () => {
         await fcl.authenticate().then(() => {
-            fcl.currentUser.subscribe((currentUser: any) => {
-                setAddr(currentUser.addr.toString())
+            fcl.currentUser.subscribe((currentUser) => {
+                // setUser(currentUser.address.toString())
             })
             // router.push("/signin")
         });
@@ -52,15 +56,15 @@ export default function Wallet() {
 
     // const user = localStorage.getItem("User")
 
-    useEffect(() => {
-        console.log("addr", addr)
-    })
+    // useEffect(() => {
+    //     fcl.currentUser.subscribe(setUser)
+    //     console.log("address", user)
+    // })
 
 
     //function for logout
     const Logout = () => {
         fcl.unauthenticate()
-        setAddr("")
         window.location.reload()
     };
 
@@ -69,24 +73,24 @@ export default function Wallet() {
             {/* conditional renedering  */}
 
             {!walletState ?
-                (<div className="mt-8 flex flex-wrap justify-center gap-4 ">
+                (<div className="flex flex-wrap justify-center ">
                     <button
                         onClick={Login}
                         type="button"
-                        className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-md font-medium text-white    hover:scale-110 duration-300  sm:w-auto"
+                        className="block w-full rounded bg-[#00EE8A] px-4 py-3 text-md font-medium text-black    hover:scale-110 duration-300  sm:w-auto"
                     >
-                        Connect with Wallet
+                        Connect with Flow
                     </button>
                 </div>
                 ) :
                 (
-                    <div className="mt-8 flex flex-wrap justify-center gap-4 ">
+                    <div className=" flex flex-wrap justify-center">
                         <button
                             onClick={Logout}
                             type="button"
-                            className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-md font-medium text-white    hover:scale-110 duration-300  sm:w-auto"
+                            className="block w-full rounded bg-[#00EE8A] px-4 py-3 text-md font-medium text-black    hover:scale-110 duration-300  sm:w-auto"
                         >
-                            Disconnect with Wallet
+                            Disconnect
                         </button>
                     </div>
                 )

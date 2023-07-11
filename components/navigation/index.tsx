@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import React, { useState } from "react";
-// import AppLogo from '../assets/app-logo.png'
+import AppLogo from '../../public/flowfi-logo.png'
 import { AiOutlineSearch } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
+import Wallet from "../wallet";
 
 const style = {
 	wrapper: `bg-black w-screen px-[1.2rem] py-[0.8rem] flex `,
@@ -28,10 +29,10 @@ export default function Navbar() {
 		<div className={style.wrapper}>
 			<Link href="/">
 				<div className={style.logoContainer}>
-					{/* <Image src={mantleSeaLogo} height={80} width={200} alt="mantle logo" /> */}
+					<Image src={AppLogo} height={50} width={100} alt="mantle logo" />
 					<div className="text-[32px] text-white font-serif"
 					>
-						POLKA.3
+						Flow Finance
 					</div>
 					<div className={style.logoText}></div>
 				</div>
@@ -89,7 +90,7 @@ export default function Navbar() {
 					<MdOutlineAccountBalanceWallet />
 				</div>
 				<div>
-					{/* <Wallet /> */}
+					<Wallet />
 				</div>
 			</div>
 		</div>
