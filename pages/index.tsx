@@ -134,7 +134,7 @@ export default function Home() {
               <div className="md:mt-4 md:mb-8 mb-6 md:pb-2 bg-gradient-to-r from-[#fff] via-[#fff]/80 to-[#9d9ea1]/50 bg-clip-text 
 text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl text-center text-[22px] max-w-[575px]">
                 Decentralized Exchange</div>
-              <p className='text-white pb-5'> You can swap any token using Chain Finance DEX</p>
+              <p className='text-white pb-5'> You can swap any token using Flow Finance DEX</p>
               <Link href="/swap">
                 <div className="inline-flex justify-center align-middle items-center p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Swap Your Tokens
@@ -150,7 +150,7 @@ text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl
               <div className="md:mt-4 md:mb-8 mb-6 md:pb-2 bg-gradient-to-r from-[#fff] via-[#fff]/80 to-[#9d9ea1]/50 bg-clip-text 
 text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl text-center text-[22px] max-w-[575px]">
                 Bank Payment</div>
-              <p className='text-white pb-5'> You can swap any token using Chain Finance DEX</p>
+              <p className='text-white pb-5'> You can swap any token using Flow Finance DEX</p>
               <Link href="/bank/transfer">
                 <div className="inline-flex justify-center align-middle items-center m-2 p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                   Bank Transfer
@@ -172,7 +172,7 @@ text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl
 text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl text-center text-[22px] max-w-[575px]">
                 Prediction Market</div>
               <p className='text-white pb-5'>
-                Chain Finance Prediction Market is built on Ethereum Chain. At the moment the markets are for cryptocurrencies, but in the future they could be for anything. Everyone can create
+                Flow Finance Prediction Market is built on Ethereum Chain. At the moment the markets are for cryptocurrencies, but in the future they could be for anything. Everyone can create
                 markets, and everyone can take markets!								 </p>
               <Link href="/create">
                 <div className="inline-flex justify-center align-middle items-center m-2 p-5 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -264,7 +264,7 @@ text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl
           <div className="box">
             <p className="header">~30 different crypto markets</p>
             <p>
-              Currently, Chain Finance has support for ~30 different crypto markets. In the future, it&apos;s
+              Currently, Flow Finance has support for ~30 different crypto markets. In the future, it&apos;s
               possible that we&apos;ll add more markets and the markets are not limited to
               cryptocurrencies.
             </p>
@@ -272,7 +272,7 @@ text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl
           <div className="box">
             <p className="header">Price feeds from Chainlink</p>
             <p>
-              Every pricefeed on Chain Finance is from{' '}
+              Every pricefeed on Flow Finance is from{' '}
               <div href="https://chain.link" target="_blank" rel="noreferrer">
                 Chainlink
               </div>
@@ -283,14 +283,14 @@ text-transparent xl:text-[4rem] md:text-5xl font-bold font-polySans md:max-w-5xl
                 target="_blank"
                 rel="noreferrer"
               >
-                MATIC/USD
+                FLOW/USD
               </div>
             </p>
           </div>
           <div className="box hackathon">
             <p className="header">Hackathon 2022 Participant</p>
             <p>
-              Chain Finance is currently participating in the Polygon #BUIDL IT Hackathon. A link to our
+              Flow Finance is currently participating in the Polygon #BUIDL IT Hackathon. A link to our
               devpost submission can be found at{' '}
               <div href="https://devpost.com" target="_blank" rel="noreferrer">
                 devpost.com

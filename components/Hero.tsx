@@ -29,7 +29,7 @@ const Hero = () => {
               <div className={style.description}>Introducing
               </div>
               <div className='px-2 text-[#98ee2c] mt-[0.8rem] mb-[.5rem] text-3xl font-extrabold '>
-                MoonFinance
+                FlowFinance
               </div>
             </div>
 
@@ -42,7 +42,7 @@ const Hero = () => {
                 <button className={style.accentedButton} >Explore <BsArrowRight className='mt-1 ml-2' /></button>
               </Link>
               <Link href="/nft">
-                <button className={style.button}>Create Stream <BsArrowRight className='mt-1 ml-2' /></button>
+                <button className={style.button}>Create Market <BsArrowRight className='mt-1 ml-2' /></button>
               </Link>
             </div>
           </div>

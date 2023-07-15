@@ -1,51 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
 import styled from 'styled-components';
-import { useNetwork } from 'wagmi';
 import { assetToImage } from '../utils/misc';
 
 const isBlackAndWhite = (activeChain: string | undefined, symbol: string) => {
 	let colored: string[] = [];
-	if (activeChain === 'rinkeby') {
-		colored = ['eth', 'btc', 'matic', 'usdc', 'bnb', 'atom', 'link'];
-	} else if (activeChain === 'maticmum') {
-		colored = ['eth', 'btc', 'matic', 'usdc', 'usdt', 'dai'];
-	} else {
-		colored = [
-			'aave',
-			'ada',
-			'algo',
-			'ape',
-			'avax',
-			'axs',
-			'bnb',
-			'btc',
-			'eth',
-			'busd',
-			'crv',
-			'dai',
-			'doge',
-			'dot',
-			'ftm',
-			'icp',
-			'link',
-			'ltc',
-			'matic',
-			'mkr',
-			'shib',
-			'snx',
-			'sol',
-			'sushi',
-			'trx',
-			'uni',
-			'usdc',
-			'usdt',
-			'vet',
-			'xmr',
-			'xtz',
-			'yfi',
-			'zec',
-		];
-	}
 	if (colored.includes(symbol)) {
 		return false;
 	}
@@ -65,7 +23,6 @@ export default function Banner({
 	setBannerChoice: Dispatch<SetStateAction<string>>;
 	setActive: Dispatch<SetStateAction<number>>;
 }) {
-	const { chain } = useNetwork();
 
 	const handleBannerChange = (symbol: string) => {
 		if (isBlackAndWhite(chain?.network ? chain?.network : 'matic', symbol)) return;
